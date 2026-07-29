@@ -43,7 +43,7 @@ export default function DonateSection() {
 
   const handleDonate = async () => {
     setError("");
-    const amount = custom || selected;
+    const amount = Math.round(Number(custom || selected));
     if (!amount || Number(amount) <= 0) {
       setError("Please select or enter a valid amount.");
       return;
@@ -63,7 +63,7 @@ export default function DonateSection() {
 
       const options = {
         key: RAZORPAY_KEY,
-        amount: Number(amount) * 100,
+        amount: amount * 100,
         currency: "INR",
         name: "MANN CARE FOUNDATION",
         description: `Donation${project ? " for " + project : ""}`,
@@ -143,14 +143,18 @@ export default function DonateSection() {
               ))}
             </div>
 
-            <input
-              type="number"
-              min="1"
-              placeholder="Enter custom amount (₹)"
-              value={custom}
-              onChange={(e) => setCustom(e.target.value)}
-              className={`${inputCls} mb-4`}
-            />
+           <input
+ type="number"
+ min="1"
+ step="1"
+ placeholder="Enter custom amount (₹)"
+ value={custom}
+ onChange={(e) => {
+   setCustom(e.target.value);
+   setSelected("");
+ }}
+ className={`${inputCls} mb-4`}
+/>
 
             <label className="block text-sm font-semibold text-ink-mid mb-1.5">
               Choose Project (optional)
