@@ -21,6 +21,31 @@ const cards = [
   },
 ];
 
+const banks = [
+  {
+    
+    title: "Bank Details 1",
+    details: [
+      "Name: Mann Care Foundation",
+      "Bank: ICICI Bank",
+      "Branch: Mumbai – Poisar Kandivali Branch",
+      "A/C No.: 559205000117",
+      "IFSC: ICIC0005592",
+    ],
+  },
+  {
+    
+    title: "Bank Details 2",
+    details: [
+      "Name: Mann Care Foundation",
+      "Bank: Axis Bank Ltd.",
+      "Branch: Malad West, Mumbai",
+      "A/C No.: 926010022056289",
+      "IFSC: UTIB0000018",
+    ],
+  },
+];
+
 export default function GetInTouch() {
   return (
     <>
@@ -130,6 +155,28 @@ export default function GetInTouch() {
                       info.manncarefoundation@gmail.com
                     </a>
                   </p>
+                </div>
+              </div>
+              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm">
+                <span className="h-11 w-11 shrink-0 rounded-full bg-pink-light text-pink-brand flex items-center justify-center">
+                  <i className="fas fa-building-columns"></i>
+                </span>
+                <div className="flex-1">
+                  <strong className="block mb-3">Bank Details (Donations)</strong>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {banks.map((opt) => (
+                      <div key={opt.title}>
+                        <span className="inline-block text-[11px] font-semibold tracking-widest uppercase text-pink-brand bg-pink-light rounded-full px-3 py-1 mb-2">
+                          {opt.title} — {opt.sub}
+                        </span>
+                        <p className="text-sm text-ink-soft space-y-1">
+                          {opt.details.map((line) => (
+                            <span key={line} className="block">{line}</span>
+                          ))}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </Reveal>

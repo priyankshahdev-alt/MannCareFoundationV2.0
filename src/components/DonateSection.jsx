@@ -7,6 +7,31 @@ import { img } from "../utils/images";
 const RAZORPAY_KEY = "rzp_live_T6FcPfo1mS01du";
 
 const AMOUNTS = ["500", "1000", "2500", "5000"];
+
+const BANK_OPTIONS = [
+  {
+    title: "Option 1",
+    sub: "Bank Details 1",
+    details: [
+      "Name: Mann Care Foundation",
+      "Bank: ICICI Bank",
+      "Branch: Mumbai – Poisar Kandivali Branch",
+      "A/C No.: 559205000117",
+      "IFSC: ICIC0005592",
+    ],
+  },
+  {
+    title: "Option 2",
+    sub: "Bank Details 2",
+    details: [
+      "Name: Mann Care Foundation",
+      "Bank: Axis Bank Ltd.",
+      "Branch: Malad West, Mumbai",
+      "A/C No.: 926010022056289",
+      "IFSC: UTIB0000018",
+    ],
+  },
+];
 const PROJECT_OPTIONS = [
   "Project Poshan",
   "Project Gyaan",
@@ -215,6 +240,30 @@ export default function DonateSection() {
             <p className="text-center text-xs text-ink-soft mt-3">
               Secured payment. Your trust is our priority.
             </p>
+          </div>
+        </div>
+
+        {/* Bank Details */}
+        <div className="mt-8 bg-white rounded-[24px] border border-border-pink p-8 shadow-pink-sm">
+          <div className="grid md:grid-cols-2 gap-8">
+            {BANK_OPTIONS.map((opt, i) => (
+              <div key={opt.title} className={i > 0 ? "md:border-l md:border-border-pink md:pl-8" : ""}>
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-pink-brand bg-pink-light rounded-full px-4 py-1.5 mb-4">
+                  {opt.title} — {opt.sub}
+                </span>
+                <div className="space-y-2">
+                  {opt.details.map((line) => {
+                    const [label, value] = line.split(": ");
+                    return (
+                      <p key={line} className="text-sm text-ink-soft flex gap-2">
+                        <span className="font-semibold text-ink shrink-0">{label}:</span>
+                        <span>{value}</span>
+                      </p>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
