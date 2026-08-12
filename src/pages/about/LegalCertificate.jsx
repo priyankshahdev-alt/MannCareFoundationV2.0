@@ -4,6 +4,8 @@ import { img } from "../../utils/images";
 const certs = [
   { icon: "📄", title: "PAN Certificate", href: "/pdf/pan-card.pdf" },
   { icon: "🤝", title: "NGO Registration", href: "/pdf/ngo-registration.pdf" },
+  { icon: "📄", title: "MANN Care 80G", href: "/pdf/Mann Care 80G.pdf" },
+  { icon: "📄", title: "MANN CRC Manesar", href: "/pdf/Mann CRC Manesar Anjana Vyas and Archana Parmar.pdf" },
 ];
 
 export default function LegalCertificate() {
