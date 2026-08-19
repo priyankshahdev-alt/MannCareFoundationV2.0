@@ -84,6 +84,11 @@ body {
   html { scroll-behavior: auto; }
 }
 
+/* Fix rotated images due to EXIF orientation */
+img {
+  image-orientation: none;
+}
+
 /* Activities marquee */
 @keyframes marquee {
   from { transform: translateX(0); }
