@@ -29,5 +29,5 @@ jobs:
         run: |
           echo "$SSH_KEY" > /tmp/ssh_key
           chmod 600 /tmp/ssh_key
-          ssh -i /tmp/ssh_key -o StrictHostKeyChecking=accept-new ec2-user@43.200.198.122 "sudo chown -R ec2-user:ec2-user /var/www/mann"
-          rsync -avz --delete -e "ssh -i /tmp/ssh_key -o StrictHostKeyChecking=accept-new" dist/ ec2-user@43.200.198.122:/var/www/mann/
+          ssh -i /tmp/ssh_key -o StrictHostKeyChecking=accept-new ec2-user@13.207.47.116 "sudo chown -R ec2-user:ec2-user /var/www/mann"
+          rsync -avz --delete -e "ssh -i /tmp/ssh_key -o StrictHostKeyChecking=accept-new" dist/ ec2-user@13.207.47.116:/var/www/mann/
