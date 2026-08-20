@@ -113,9 +113,9 @@ export default function GetInTouch() {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-10">
-            <Reveal className="space-y-5">
-              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm">
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+            <Reveal className="space-y-5 flex flex-col justify-between">
+              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm flex-1">
                 <span className="h-11 w-11 shrink-0 rounded-full bg-pink-light text-pink-brand flex items-center justify-center">
                   <i className="fas fa-location-dot"></i>
                 </span>
@@ -127,7 +127,7 @@ export default function GetInTouch() {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm">
+              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm flex-1">
                 <span className="h-11 w-11 shrink-0 rounded-full bg-pink-light text-pink-brand flex items-center justify-center">
                   <i className="fas fa-phone"></i>
                 </span>
@@ -140,7 +140,7 @@ export default function GetInTouch() {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm">
+              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm flex-1">
                 <span className="h-11 w-11 shrink-0 rounded-full bg-pink-light text-pink-brand flex items-center justify-center">
                   <i className="fas fa-envelope"></i>
                 </span>
@@ -157,7 +157,7 @@ export default function GetInTouch() {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm">
+              <div className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm flex-1">
                 <span className="h-11 w-11 shrink-0 rounded-full bg-pink-light text-pink-brand flex items-center justify-center">
                   <i className="fas fa-building-columns"></i>
                 </span>
@@ -167,7 +167,7 @@ export default function GetInTouch() {
                     {banks.map((opt) => (
                       <div key={opt.title}>
                         <span className="inline-block text-[11px] font-semibold tracking-widest uppercase text-pink-brand bg-pink-light rounded-full px-3 py-1 mb-2">
-                          {opt.title} — {opt.sub}
+                          {opt.title}
                         </span>
                         <p className="text-sm text-ink-soft space-y-1">
                           {opt.details.map((line) => (
@@ -181,8 +181,10 @@ export default function GetInTouch() {
               </div>
             </Reveal>
 
-            <Reveal delay={120}>
-              <ContactForm />
+            <Reveal delay={120} className="flex flex-col">
+              <div className="flex-1">
+                <ContactForm />
+              </div>
             </Reveal>
           </div>
         </div>

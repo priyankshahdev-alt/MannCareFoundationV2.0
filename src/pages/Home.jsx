@@ -495,8 +495,8 @@ export default function Home() {
             Contact <span className="gradient-text">Us</span>
           </SectionHead>
 
-          <div className="grid lg:grid-cols-2 gap-10">
-            <Reveal className="space-y-5">
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+            <Reveal className="space-y-5 flex flex-col justify-between">
               {[
                 {
                   icon: "fa-location-dot",
@@ -534,7 +534,7 @@ export default function Home() {
               ].map((c) => (
                 <div
                   key={c.title}
-                  className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm"
+                  className="flex gap-4 bg-white rounded-2xl border border-border-pink p-5 shadow-pink-sm flex-1"
                 >
                   <span className="h-11 w-11 shrink-0 rounded-full bg-pink-light text-pink-brand flex items-center justify-center">
                     <i className={`fas ${c.icon}`}></i>
@@ -547,8 +547,10 @@ export default function Home() {
               ))}
             </Reveal>
 
-            <Reveal delay={120}>
-              <ContactForm />
+            <Reveal delay={120} className="flex flex-col">
+              <div className="flex-1">
+                <ContactForm />
+              </div>
             </Reveal>
           </div>
         </div>
@@ -574,11 +576,11 @@ export function ContactForm() {
   }
 
   return (
-    <div className="bg-white rounded-[24px] border border-border-pink p-8 shadow-pink-sm space-y-4">
+    <div className="bg-white rounded-[24px] border border-border-pink p-8 shadow-pink-sm space-y-4 h-full flex flex-col">
       <input type="text" placeholder="Your Full Name" className={inputCls} />
       <input type="email" placeholder="Email Address" className={inputCls} />
       <input type="tel" placeholder="Phone Number" className={inputCls} />
-      <textarea placeholder="Your Message" rows={4} className={inputCls}></textarea>
+      <textarea placeholder="Your Message" rows={4} className={`${inputCls} flex-1`}></textarea>
       <button
         type="button"
         onClick={() => setSent(true)}
