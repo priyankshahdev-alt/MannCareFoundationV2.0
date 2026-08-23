@@ -187,21 +187,29 @@ export default function Home() {
       <HeroSlider />
 
       {/* ===== HERO ===== */}
-      <section className="pt-4 pb-10 lg:pt-6 lg:pb-16 px-5" id="home">
+<section className="pt-4 pb-10 lg:pt-6 lg:pb-16 px-5" id="home">
         <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <div className="relative z-10">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 relative z-10">
               Empowering
               <br />
-              <span className="gradient-text">Women &amp; Children</span>
+              <span className="gradient-text">Women & Children</span>
               <br />
               Across India
             </h1>
-            <p className="text-ink-soft text-lg mb-8 max-w-xl">
+            <div className="absolute top-0 left-0 pt-6 px-6 bg-white/20 min-h-fit z-50">
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                OUR STORY
+              </h2>
+              <p className="text-white text-lg mb-6">
+                One mission, one team, countless lives impacted.
+              </p>
+            </div>
+            <p className="text-ink-soft text-lg mb-8 max-w-xl relative z-10">
               MANN CARE FOUNDATION transforms lives through nutrition, education, health, hygiene
-              &amp; empowerment — reaching 7 states with compassion in action.
+              & empowerment — reaching 7 states with compassion in action.
             </p>
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-4 mb-10 relative z-10">
               <a
                 href="#donate"
                 className="inline-flex items-center gap-2 bg-pink-brand text-white px-7 py-3.5 rounded-full font-semibold shadow-pink-md hover:bg-pink-mid hover:-translate-y-0.5 transition"
@@ -215,7 +223,7 @@ export default function Home() {
                 Learn More <i className="fas fa-arrow-right"></i>
               </a>
             </div>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-8 relative z-10">
               <div className="text-center">
                 <span className="block font-display text-4xl font-bold text-pink-brand">6</span>
                 <span className="text-sm text-ink-soft">Projects</span>
@@ -229,7 +237,7 @@ export default function Home() {
           </div>
           <div>
             <img
-              src={img("/images/women-child.jpeg")}
+              src={img("/images/h1.png")}
               alt="NGO Support"
               className="w-full max-h-[400px] rounded-[32px] shadow-pink-lg object-cover"
             />
@@ -341,13 +349,13 @@ export default function Home() {
                         {p.name}
                       </Link>
                     </h3>
-                    <p className="text-xs font-semibold text-pink-brand uppercase tracking-wide mb-2">
+                    <p className="text-xs font-semibold text-pink-brand uppercase tracking-wide mb-2" style={{ textAlign: 'justify' }}>
                       {p.tag}
                     </p>
-                    <p className="text-sm text-ink-soft mb-3">{p.desc}</p>
+                    <p className="text-sm text-ink-soft mb-3" style={{ textAlign: 'justify' }}>{p.desc}</p>
                     <ul className="space-y-1.5 text-xs mb-5">
                       {p.points.map((pt) => (
-                        <li key={pt} className="flex gap-2">
+                        <li key={pt} className="flex gap-2" style={{ textAlign: 'justify' }}>
                           <i className="fas fa-check-circle text-pink-brand mt-0.5"></i>
                           {pt}
                         </li>

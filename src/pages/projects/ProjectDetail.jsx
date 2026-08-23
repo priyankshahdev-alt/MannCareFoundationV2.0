@@ -35,12 +35,12 @@ export default function ProjectDetail() {
             {p.badge}
           </span>
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">{p.name}</h1>
-          <p className="text-lg text-ink-soft mb-10">{p.subtitle}</p>
+          <p className="text-lg text-ink-soft mb-10" style={{ textAlign: 'justify' }}>{p.subtitle}</p>
 
           <Reveal>
             <div className="bg-white rounded-[28px] border border-border-pink shadow-pink-lg p-8 md:p-12 text-center">
               <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">{p.card.title}</h2>
-              <p className="text-ink-soft mb-6 group flex items-start gap-3 text-left">
+              <p className="text-ink-soft mb-6 group flex items-start gap-3 text-left" style={{ textAlign: 'justify' }}>
                 <i className="fas fa-arrow-right mt-1.5 shrink-0 text-pink-brand opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
                 <span>{p.card.text}</span>
               </p>
@@ -66,7 +66,7 @@ export default function ProjectDetail() {
                 <div className="relative z-10">
                   <span className="inline-block text-3xl mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">🎯</span>
                   <h3 className="font-display text-xl font-bold mb-3 text-pink-brand">Our Mission</h3>
-                  <p className="text-ink-soft">{p.mission}</p>
+                  <p className="text-ink-soft" style={{ textAlign: 'justify' }}>{p.mission}</p>
                 </div>
               </div>
             </Reveal>
@@ -76,7 +76,7 @@ export default function ProjectDetail() {
                 <div className="relative z-10">
                   <span className="inline-block text-3xl mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">💡</span>
                   <h3 className="font-display text-xl font-bold mb-3 text-pink-brand">Why It Matters</h3>
-                  <p className="text-ink-soft">{p.whyItMatters}</p>
+                  <p className="text-ink-soft" style={{ textAlign: 'justify' }}>{p.whyItMatters}</p>
                 </div>
               </div>
             </Reveal>
@@ -141,7 +141,7 @@ export default function ProjectDetail() {
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-2">{p.cta.title}</h2>
-            <p className="text-white/90 max-w-[600px]">{p.cta.text}</p>
+            <p className="text-white/90 max-w-[600px]" style={{ textAlign: 'justify' }}>{p.cta.text}</p>
           </div>
           <Link
             to="/get-involved/donate-online"
