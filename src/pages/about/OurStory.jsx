@@ -64,17 +64,17 @@ export default function OurStory() {
           </div>
           <div className="grid md:grid-cols-2 gap-7">
             <Reveal>
-              <div className="bg-white rounded-[24px] border border-border-pink p-8 shadow-pink-sm text-center h-full">
-                <span className="text-4xl block mb-4">🌍</span>
-                <h3 className="font-display text-xl font-bold mb-3">Our Vision</h3>
-                <p className="text-ink-soft">
-                  To build an inclusive society where every woman and child has access to
-                  opportunities, resources, health, education, and dignity.
-                </p>
-              </div>
-            </Reveal>
+<div className="bg-white rounded-[24px] border border-border-pink p-8 shadow-pink-sm text-center">
+                  <span className="text-4xl block mb-4">🌍</span>
+                  <h3 className="font-display text-xl font-bold mb-3">Our Vision</h3>
+                  <p className="text-ink-soft">
+                    To build an inclusive society where every woman and child has access to
+                    opportunities, resources, health, education, and dignity.
+                  </p>
+                </div>
+              </Reveal>
             <Reveal delay={100}>
-              <div className="bg-white rounded-[24px] border border-border-pink p-8 shadow-pink-sm text-center h-full">
+              <div className="bg-white rounded-[24px] border border-border-pink p-8 shadow-pink-sm text-center">
                 <span className="text-4xl block mb-4">💖</span>
                 <h3 className="font-display text-xl font-bold mb-3">Our Mission</h3>
                 <p className="text-ink-soft">
@@ -98,7 +98,7 @@ export default function OurStory() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 80}>
-                <div className="bg-white rounded-[24px] border border-border-pink p-7 text-center shadow-pink-sm hover:-translate-y-2 hover:shadow-pink-lg transition-all h-full">
+                <div className="bg-white rounded-[24px] border border-border-pink p-7 text-center shadow-pink-sm hover:-translate-y-2 hover:shadow-pink-lg transition-all">
                   <span className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-pink-pale text-3xl">{v.icon}</span>
                   <h3 className="font-display font-bold mb-2">{v.title}</h3>
                   <p className="text-sm text-ink-soft">{v.desc}</p>

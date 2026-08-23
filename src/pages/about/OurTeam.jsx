@@ -23,7 +23,7 @@ export default function OurTeam() {
             {team.map((m, i) => (
               <Reveal key={m.name} delay={i * 80} className="w-full max-w-xs">
                 <div className="bg-white rounded-[24px] border border-border-pink overflow-hidden shadow-pink-sm hover:shadow-pink-lg hover:-translate-y-2 transition-all">
-                  <img src={m.img} alt={m.name} className="w-full h-72 object-cover" />
+                  <img src={m.img} alt={m.name} className="w-full h-64 object-contain" />
                   <div className="p-6 text-center">
                     <h3 className="font-display text-lg font-bold">{m.name}</h3>
                     <p className="text-xs font-semibold tracking-widest text-pink-brand mt-1">

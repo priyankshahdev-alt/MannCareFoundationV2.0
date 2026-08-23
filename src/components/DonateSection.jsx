@@ -32,6 +32,7 @@ const BANK_OPTIONS = [
     ],
   },
 ];
+
 const PROJECT_OPTIONS = [
   "Project Poshan",
   "Project Gyaan",
@@ -169,17 +170,17 @@ export default function DonateSection() {
             </div>
 
            <input
- type="number"
- min="1"
- step="1"
- placeholder="Enter custom amount (₹)"
- value={custom}
- onChange={(e) => {
-   setCustom(e.target.value);
-   setSelected("");
- }}
- className={`${inputCls} mb-4`}
-/>
+            type="number"
+            min="1"
+            step="1"
+            placeholder="Enter custom amount (₹)"
+            value={custom}
+            onChange={(e) => {
+              setCustom(e.target.value);
+              setSelected("");
+            }}
+            className={`${inputCls} mb-4`}
+          />
 
             <label className="block text-sm font-semibold text-ink-mid mb-1.5">
               Choose Project (optional)
@@ -243,11 +244,11 @@ export default function DonateSection() {
           </div>
         </div>
 
-        {/* Bank Details */}
+        {/* Bank Details + QR Code */}
         <div className="mt-8 bg-white rounded-[24px] border border-border-pink p-8 shadow-pink-sm">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {BANK_OPTIONS.map((opt, i) => (
-              <div key={opt.title} className={i > 0 ? "md:border-l md:border-border-pink md:pl-8" : ""}>
+              <div key={opt.title} className="col-span-1 md:col-span-1">
                 <span className="inline-block text-xs font-semibold tracking-widest uppercase text-pink-brand bg-pink-light rounded-full px-4 py-1.5 mb-4">
                   {opt.title} — {opt.sub}
                 </span>
@@ -264,6 +265,9 @@ export default function DonateSection() {
                 </div>
               </div>
             ))}
+            <div className="col-span-1 md:col-span-1 flex items-center justify-center">
+              <img src={img("/gpay-qr.jpeg")} alt="GPay QR Code" className="h-48 w-48 rounded-lg object-contain bg-white p-2" />
+            </div>
           </div>
         </div>
       </div>
