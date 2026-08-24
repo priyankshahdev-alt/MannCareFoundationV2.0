@@ -191,20 +191,10 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative z-10">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 relative z-10">
-              Empowering
-              <br />
-              <span className="gradient-text">Women & Children</span>
-              <br />
+              Empowering{" "}
+              <span className="gradient-text">Women &amp; Children</span>{" "}
               Across India
             </h1>
-            <div className="absolute top-0 left-0 pt-6 px-6 bg-white/20 min-h-fit z-50">
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-                OUR STORY
-              </h2>
-              <p className="text-white text-lg mb-6">
-                One mission, one team, countless lives impacted.
-              </p>
-            </div>
             <p className="text-ink-soft text-lg mb-8 max-w-xl relative z-10">
               MANN CARE FOUNDATION transforms lives through nutrition, education, health, hygiene
               & empowerment — reaching 7 states with compassion in action.
