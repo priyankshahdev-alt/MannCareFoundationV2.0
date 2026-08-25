@@ -6,7 +6,7 @@ import { img } from "../../utils/images";
 export default function OurTeam() {
   return (
     <>
-      <PageHero desktop={img("/about/hero2.jpeg")} mobile={img("/about/mobile-slide2.jpeg")} alt="Our Team" className="h-[70vh] md:h-[85vh]" />
+      <PageHero desktop={img("/projects/aaa.jpeg")} mobile={img("/about/mobile-slide2.jpeg")} alt="Our Team" className="h-[70vh] md:h-[85vh]" />
 
       <section className="py-16 px-5" id="team">
         <div className="max-w-[1100px] mx-auto">
@@ -19,7 +19,7 @@ export default function OurTeam() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-2 gap-2 justify-items-center">
             {team.map((m, i) => (
               <Reveal key={m.name} delay={i * 80} className="w-full max-w-xs">
                 <div className="bg-white rounded-[24px] border border-border-pink overflow-hidden shadow-pink-sm hover:shadow-pink-lg hover:-translate-y-2 transition-all">

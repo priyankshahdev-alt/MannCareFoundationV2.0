@@ -18,7 +18,7 @@ const SLIDES = [
     cta2Link: "#about",
   },
   {
-    desktop: img("/images/heroslide2.jpeg"),
+    desktop: img("/images/21.jpeg"),
     mobile: img("/images/mobile-slide2.jpeg"),
     heading: "Nourishing Lives, Building Futures",
     sub: "Project Poshan ensures every child and family gets access to nutritious food and dignity.",
@@ -28,7 +28,7 @@ const SLIDES = [
     cta2Link: "#projects",
   },
   {
-    desktop: img("/images/heroslide3.jpeg"),
+    desktop: img("/images/ne.jpeg"),
     mobile: img("/images/mobile-slide3.jpeg"),
     heading: "Education Changes Everything",
     sub: "Project Gyaan brings quality education and learning resources to underprivileged children.",
@@ -38,7 +38,7 @@ const SLIDES = [
     cta2Link: "#about",
   },
   {
-    desktop: img("/images/heroslide4.jpeg"),
+    desktop: img("/images/oop.jpeg"),
     mobile: img("/images/mobile-slide4.jpeg"),
     heading: "Healthcare For All",
     sub: "Project Swasth provides medical aid, health camps, and hygiene awareness to communities in need.",

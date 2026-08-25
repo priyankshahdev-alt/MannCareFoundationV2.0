@@ -13,7 +13,7 @@ export const projects = [
     name: "Project Poshan",
     badge: "Nutrition Support Initiative",
     subtitle: "Nourishing Lives, Restoring Hope & Building Healthier Communities",
-    heroImg: img("/projects/hero1.jpeg"),
+    heroImg: img("/projects/zz.jpeg"),
     heroImgMobile: img("/projects/mobile-slide1.jpeg"),
     card: {
       title: "Everyone Deserves Nutritious Food",
@@ -59,7 +59,7 @@ export const projects = [
     name: "Project Gyaan",
     badge: "Education Support Initiative",
     subtitle: "Empowering Children Through Education, Technology & Opportunity",
-    heroImg: img("/projects/hero2.jpeg"),
+    heroImg: img("/projects/uuu.jpeg"),
     heroImgMobile: img("/projects/mobile-slide2.jpeg"),
     card: {
       title: "Every Child Deserves The Right To Learn",
@@ -105,7 +105,7 @@ export const projects = [
     name: "Project Sakhi",
     badge: "Women Empowerment Initiative",
     subtitle: "Empowering Women Through Confidence, Skills, Health & Independence",
-    heroImg: img("/projects/hero3.jpeg"),
+    heroImg: img("/projects/iii.jpeg"),
     heroImgMobile: img("/projects/mobile-slide3.jpeg"),
     card: {
       title: "Strong Women Build Strong Communities",
@@ -151,7 +151,7 @@ export const projects = [
     name: "Project Swasth",
     badge: "Health & Hygiene Initiative",
     subtitle: "Promoting Health, Hygiene, Awareness & Dignity For Every Individual",
-    heroImg: img("/projects/hero4.jpeg"),
+    heroImg: img("/projects/ppp.jpeg"),
     heroImgMobile: img("/projects/mobile-slide4.jpeg"),
     card: {
       title: "Healthy Communities Begin With Awareness",
@@ -338,7 +338,7 @@ export const gallerySections = [
     tag: "🍉 Beat the Heat Initiative",
     title: "Watermelon Distribution",
     desc: "Cool relief in the summer heat — juicy watermelons shared to keep our community hydrated & happy.",
-    images: [img("/media/w1.jpg"), img("/media/w2.jpg"), img("/media/w3.jpg"), img("/media/w4.jpg"), img("/media/w5.jpg")],
+    images: [img("/media/w1.jpg"), img("/media/w2.jpg"), img("/media/w3.jpg"), img("/media/w4.jpg"), img("/media/w5.jpg"), img("/projects/imd.png")],
   },
   {
     tag: "🍒 Summer Refreshment Drive",
@@ -360,5 +360,4 @@ export const team = [
   { img: img("/about/team2.jpeg"), name: "Mrs. Archana Parmar", role: "VICE PRESIDENT" },
   { img: img("/about/team3.jpeg"), name: "Mrs. Deepali Gautam", role: "CORE MEMBER" },
   { img: img("/about/team4.jpeg"), name: "Mrs. Sushma Ambokar", role: "CORE MEMBER" },
-  { img: img("/about/team6.jpeg"), name: "Mrs. Maya Jadhao", role: "CORE MEMBER" },
 ];
