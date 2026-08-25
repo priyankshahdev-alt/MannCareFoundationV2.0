@@ -31,7 +31,7 @@ export default function Media() {
                 <div className="h-1 w-16 bg-pink-brand rounded-full mx-auto mt-5"></div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+              <div className={sec.title === "Litchi Distribution" ? "grid grid-cols-2 gap-5" : "grid grid-cols-2 md:grid-cols-3 gap-5"}>
                 {sec.images.map((src, i) => (
                   <Reveal key={src} delay={i * 60}>
                     <figure className="group relative overflow-hidden rounded-2xl shadow-pink-sm cursor-pointer" onClick={() => setLightbox(src)}>
