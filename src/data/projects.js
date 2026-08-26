@@ -345,6 +345,7 @@ export const gallerySections = [
     title: "Litchi Distribution",
     desc: "Spreading sweetness & nutrition — fresh Litchis distributed with love to children and families in need.",
     images: [img("/media/l1.jpg"), img("/media/l2.jpg"), img("/media/l3.jpg"), img("/media/l4.jpg")],
+    layout: "two-by-two",
   },
   {
     tag: "🍪 Nutrition on the Go",
