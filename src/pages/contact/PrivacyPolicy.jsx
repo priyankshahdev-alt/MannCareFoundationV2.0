@@ -13,7 +13,7 @@ const boxes = [
 export default function PrivacyPolicy() {
   return (
     <>
-      <PageHero desktop={img("/contact/hero2.jpeg")} mobile={img("/contact/mobile-slide2.jpeg")} alt="Privacy Policy" className="h-[70vh] md:h-[85vh]" />
+      <PageHero desktop={img("/contact/uiii.jpeg")} mobile={img("/contact/mobile-slide2.jpeg")} alt="Privacy Policy" className="h-[70vh] md:h-[85vh]" />
 
       <section className="py-16 px-5">
         <div className="max-w-[850px] mx-auto">

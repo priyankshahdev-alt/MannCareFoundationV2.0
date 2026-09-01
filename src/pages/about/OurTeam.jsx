@@ -19,32 +19,10 @@ export default function OurTeam() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-6">
-            {team.slice(0, 3).map((m, i) => (
-              <Reveal
-                key={m.name}
-                delay={i * 80}
-                className="lg:col-span-2"
-              >
-                <div className="bg-white rounded-[24px] border border-border-pink overflow-hidden shadow-pink-sm hover:shadow-pink-lg hover:-translate-y-2 transition-all h-full w-full">
-                  <img src={m.img} alt={m.name} className="w-full h-64 object-contain" />
-                  <div className="p-6 text-center">
-                    <h3 className="font-display text-lg font-bold">{m.name}</h3>
-                    <p className="text-xs font-semibold tracking-widest text-pink-brand mt-1">
-                      {m.role}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-
-            {team.slice(3, 5).map((m, i) => (
-              <Reveal
-                key={m.name}
-                delay={(i + 3) * 80}
-                className={i === 0 ? "lg:col-start-2 lg:col-span-2" : "lg:col-span-2"}
-              >
-                <div className="bg-white rounded-[24px] border border-border-pink overflow-hidden shadow-pink-sm hover:shadow-pink-lg hover:-translate-y-2 transition-all h-full w-full">
+          <div className="grid grid-cols-2 gap-2 justify-items-center">
+            {team.map((m, i) => (
+              <Reveal key={m.name} delay={i * 80} className="w-full max-w-xs">
+                <div className="bg-white rounded-[24px] border border-border-pink overflow-hidden shadow-pink-sm hover:shadow-pink-lg hover:-translate-y-2 transition-all">
                   <img src={m.img} alt={m.name} className="w-full h-64 object-contain" />
                   <div className="p-6 text-center">
                     <h3 className="font-display text-lg font-bold">{m.name}</h3>

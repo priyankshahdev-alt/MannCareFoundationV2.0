@@ -86,7 +86,7 @@ body {
 
 /* Fix rotated images due to EXIF orientation */
 img {
-  image-orientation: none;
+  /* image-orientation: none; */
 }
 
 /* Activities marquee */

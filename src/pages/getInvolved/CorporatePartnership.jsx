@@ -27,7 +27,7 @@ export default function CorporatePartnership() {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
   return (
     <>
-      <PageHero desktop={img("/get-involved/hero2.jpeg")} mobile={img("/get-involved/mobile-slide2.jpeg")} alt="Corporate Partnership" className="h-[70vh] md:h-[85vh]" />
+      <PageHero desktop={img("/get-involved/eee.jpeg")} mobile={img("/get-involved/eee.jpeg")} alt="Corporate Partnership" className="h-[70vh] md:h-[85vh]" />
 
       <section className="py-16 px-5 text-center">
         <div className="max-w-[850px] mx-auto">
