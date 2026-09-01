@@ -19,20 +19,40 @@ export default function OurTeam() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 justify-items-center">
-            {team.map((m, i) => (
-              <Reveal key={m.name} delay={i * 80} className="w-full max-w-xs">
-                <div className="bg-white rounded-[24px] border border-border-pink overflow-hidden shadow-pink-sm hover:shadow-pink-lg hover:-translate-y-2 transition-all">
-                  <img src={m.img} alt={m.name} className="w-full h-64 object-contain" />
-                  <div className="p-6 text-center">
-                    <h3 className="font-display text-lg font-bold">{m.name}</h3>
-                    <p className="text-xs font-semibold tracking-widest text-pink-brand mt-1">
-                      {m.role}
-                    </p>
+          <div className="space-y-8">
+            {/* First row - 3 images */}
+            <div className="grid grid-cols-3 gap-6 justify-items-center">
+              {team.slice(0, 3).map((m, i) => (
+                <Reveal key={m.name} delay={i * 80} className="w-full max-w-xs">
+                  <div className="bg-white rounded-[24px] border border-border-pink overflow-hidden shadow-pink-sm hover:shadow-pink-lg hover:-translate-y-2 transition-all">
+                    <img src={m.img} alt={m.name} className="w-full h-64 object-contain" />
+                    <div className="p-6 text-center">
+                      <h3 className="font-display text-lg font-bold">{m.name}</h3>
+                      <p className="text-xs font-semibold tracking-widest text-pink-brand mt-1">
+                        {m.role}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              ))}
+            </div>
+
+            {/* Second row - 2 images centered */}
+            <div className="grid grid-cols-2 gap-6 justify-items-center max-w-[600px] mx-auto">
+              {team.slice(3, 5).map((m, i) => (
+                <Reveal key={m.name} delay={(i + 3) * 80} className="w-full max-w-xs">
+                  <div className="bg-white rounded-[24px] border border-border-pink overflow-hidden shadow-pink-sm hover:shadow-pink-lg hover:-translate-y-2 transition-all">
+                    <img src={m.img} alt={m.name} className="w-full h-64 object-contain" />
+                    <div className="p-6 text-center">
+                      <h3 className="font-display text-lg font-bold">{m.name}</h3>
+                      <p className="text-xs font-semibold tracking-widest text-pink-brand mt-1">
+                        {m.role}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>

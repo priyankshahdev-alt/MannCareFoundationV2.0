@@ -19,6 +19,14 @@ export const projects = [
       title: "Everyone Deserves Nutritious Food",
       text: "Project Poshan is a flagship humanitarian initiative of MANN Foundation dedicated to addressing hunger, malnutrition, and food insecurity among vulnerable individuals and families. Through ration support, nutritious meals, healthy snacks, and refreshment assistance, we ensure that nourishment reaches those who need it most.",
     },
+    gallery: [
+      img("/projects/pop1.jpg"),
+      img("/projects/poshan2.jpg"),
+      img("/projects/poshan3.JPG"),
+      img("/projects/poshan4.jpg"),
+      img("/projects/poshan5.jpg"),
+      img("/projects/poshan6.jpg"),
+    ],
     aboutHeading: "Fighting Hunger With Compassion",
     mission:
       "Access to nutritious food is not a privilege—it is a fundamental human necessity. Project Poshan works to ensure that every individual receives the nourishment required to live with dignity, health, and hope.",
@@ -65,6 +73,14 @@ export const projects = [
       title: "Every Child Deserves The Right To Learn",
       text: "Project Gyaan is a transformative education initiative focused on ensuring inclusive, continuous, and quality education for children from marginalized and underserved communities. Through academic support, digital learning, educational resources, and skill development opportunities, the project empowers children to build brighter futures and achieve their full potential.",
     },
+    gallery: [
+      img("/projects/gyaan1.JPG"),
+      img("/projects/gyaan2.JPG"),
+      img("/projects/gyaan3.jpeg"),
+      img("/projects/gyaan4.jpeg"),
+      img("/projects/gyaan5.jpg"),
+      img("/projects/gyaan6.jpg"),
+    ],
     aboutHeading: "Transforming Lives Through Education",
     mission:
       "Project Gyaan aims to ensure that every child, regardless of economic background, has access to quality education, learning resources, digital opportunities, and the support needed to succeed academically and personally.",
@@ -111,6 +127,14 @@ export const projects = [
       title: "Strong Women Build Strong Communities",
       text: "Project Sakhi is a holistic women empowerment initiative dedicated to strengthening confidence, self-reliance, health awareness, and economic independence among women from marginalized communities. Through skills, knowledge, and support, the project enables women to become active contributors and leaders in society.",
     },
+    gallery: [
+      img("/projects/sakhi1.JPG"),
+      img("/projects/sakhi2.JPG"),
+      img("/projects/sakhi3.1.jpg"),
+      img("/projects/sakhi4.jpg"),
+      img("/projects/sakhi5.jpg"),
+      img("/sakhi6.jpg"),
+    ],
     aboutHeading: "Empowering Women Beyond Limitations",
     mission:
       "Project Sakhi works to empower women economically, socially, physically, and emotionally by providing opportunities, awareness, resources, and support systems that enable them to live with dignity and confidence.",
@@ -157,6 +181,14 @@ export const projects = [
       title: "Healthy Communities Begin With Awareness",
       text: "Project Swasth is a comprehensive health and hygiene initiative focused on preventive healthcare, hygiene awareness, and access to essential health support. Through education, medical assistance, hygiene resources, and community outreach, the initiative empowers individuals to lead healthier, safer, and more dignified lives.",
     },
+    gallery: [
+      img("/projects/swasth1.jpg"),
+      img("/projects/swasth2.jpg"),
+      img("/projects/swasth3.jpg"),
+      img("/projects/swasth4.jpg"),
+      img("/projects/swasth5.jpg"),
+      img("/projects/swasth6.jpg"),
+    ],
     aboutHeading: "Building Healthier Communities Through Prevention",
     mission:
       "Project Swasth aims to improve community health by promoting hygiene, preventive healthcare, health education, and access to essential medical support for vulnerable individuals and families.",
@@ -203,6 +235,13 @@ export const projects = [
       title: "Every Living Being Deserves Care & Dignity",
       text: "Project Pashu is a compassionate animal welfare initiative dedicated to the care, protection, and well-being of animals in need. Through feeding drives, medical assistance, rescue support, and community awareness, the initiative works to ensure that vulnerable animals receive the care, safety, and compassion they deserve.",
     },
+    gallery: [
+      img("/projects/pashu1.jpg"),
+      img("/media/e3e.jpg"),
+      img("/media/pashu3.0.jpg"),
+      img("/media/pashu4.jpg"),
+    ],
+    galleryCols: 2,
     aboutHeading: "Protecting & Caring For Our Voiceless Companions",
     mission:
       "Project Pashu is committed to improving the lives of animals through care, protection, feeding support, medical assistance, and awareness initiatives that promote kindness and responsible coexistence.",
