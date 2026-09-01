@@ -16,10 +16,49 @@ export default function Media() {
     };
   }, [lightbox]);
 
+  const renderGallery = (images, title, layout) => {
+    if (layout === "two-by-two") {
+      return (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {images.map((src, index) => (
+            <Reveal key={src} delay={index * 60} className="lg:col-span-2">
+              <figure className="group relative overflow-hidden rounded-2xl shadow-pink-sm cursor-pointer h-full" onClick={() => setLightbox(src)}>
+                <img src={src} alt={`${title} ${index + 1}`} loading="lazy" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pink-brand/80 to-transparent text-white text-sm font-medium px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity">{title}</figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+      );
+    }
+
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-6">
+        {images.slice(0, 3).map((src, index) => (
+          <Reveal key={src} delay={index * 60} className="lg:col-span-2">
+            <figure className="group relative overflow-hidden rounded-2xl shadow-pink-sm cursor-pointer h-full" onClick={() => setLightbox(src)}>
+              <img src={src} alt={`${title} ${index + 1}`} loading="lazy" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pink-brand/80 to-transparent text-white text-sm font-medium px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity">{title}</figcaption>
+            </figure>
+          </Reveal>
+        ))}
+
+        {images.slice(3, 5).map((src, index) => (
+          <Reveal key={src} delay={(index + 3) * 60} className={index === 0 ? "lg:col-start-2 lg:col-span-2" : "lg:col-span-2"}>
+            <figure className="group relative overflow-hidden rounded-2xl shadow-pink-sm cursor-pointer h-full" onClick={() => setLightbox(src)}>
+              <img src={src} alt={`${title} ${index + 4}`} loading="lazy" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pink-brand/80 to-transparent text-white text-sm font-medium px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity">{title}</figcaption>
+            </figure>
+          </Reveal>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <>
-      <main className="py-16 px-5">
-        <div className="max-w-[1150px] mx-auto space-y-20">
+      <main className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1100px] mx-auto space-y-20">
           {gallerySections.map((sec) => (
             <section key={sec.title}>
               <div className="text-center mb-10">
@@ -31,16 +70,7 @@ export default function Media() {
                 <div className="h-1 w-16 bg-pink-brand rounded-full mx-auto mt-5"></div>
               </div>
 
-              <div className={sec.title === "Litchi Distribution" ? "grid grid-cols-2 gap-5" : "grid grid-cols-2 md:grid-cols-3 gap-5"}>
-                {sec.images.map((src, i) => (
-                  <Reveal key={src} delay={i * 60}>
-                    <figure className="group relative overflow-hidden rounded-2xl shadow-pink-sm cursor-pointer" onClick={() => setLightbox(src)}>
-                      <img src={src} alt={`${sec.title} ${i + 1}`} loading="lazy" className="h-72 md:h-80 w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                      <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pink-brand/80 to-transparent text-white text-sm font-medium px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity">{sec.title}</figcaption>
-                    </figure>
-                  </Reveal>
-                ))}
-              </div>
+              {renderGallery(sec.images, sec.title, sec.layout)}
             </section>
           ))}
         </div>

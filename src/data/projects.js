@@ -384,6 +384,7 @@ export const gallerySections = [
     title: "Litchi Distribution",
     desc: "Spreading sweetness & nutrition — fresh Litchis distributed with love to children and families in need.",
     images: [img("/media/l1.jpg"), img("/media/l2.jpg"), img("/media/l3.jpg"), img("/media/l4.jpg")],
+    layout: "two-by-two",
   },
   {
     tag: "🍪 Nutrition on the Go",
@@ -397,6 +398,7 @@ export const gallerySections = [
 export const team = [
   { img: img("/about/team1.jpeg"), name: "Mrs. Anjana Vyas", role: "PRESIDENT" },
   { img: img("/about/team2.jpeg"), name: "Mrs. Archana Parmar", role: "VICE PRESIDENT" },
-  { img: img("/about/team3.jpeg"), name: "Mrs. Deepali Gautam", role: "CORE MEMBER" },
-  { img: img("/about/team4.jpeg"), name: "Mrs. Sushma Ambokar", role: "CORE MEMBER" },
+  { img: img("/about/team3.jpeg"), name: "Mrs. Deepali Gautam", role: "MANAGEMENT" },
+  { img: img("/about/team4.jpeg"), name: "Mrs. Sushma Ambokar", role: "MANAGEMENT" },
+  { img: img("/projects/new1.jpeg"), name: "Mamta Shah", role: "MANAGEMENT" },
 ];
